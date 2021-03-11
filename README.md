@@ -20,7 +20,7 @@ const email = require('generic-gmailsender');
 var options = {
     auth_mail: "test@gmail.com", //Gmail address where the email will come from
     auth_pass: "test", //Gmail password of this aaccount
-    alias: '"Example Header <"', // Sender header to identify mail
+    alias: '"Example Header "<', // Sender header to identify mail
     to: 'test1@gmail.com, test2@gmail.com', //Recipients
     subject: 'Generic-gmailsender | test', //Mail subject
     text: 'Hey there, this is a test message sent with generic-gmailsender', //Message to send
