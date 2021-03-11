@@ -1,16 +1,16 @@
-import send from "./index";
+import email from "./index";
 
-describe("generic-mailsender", () => {
+describe("generic-gmailsender", () => {
   it("should send a mail'", () => {
     var options = {
         auth_mail: "test@gmail.com",
         auth_pass: "test",
         alias: '"Example Header" <',
         to: 'test1@gmail.com, test2@gmail.com',
-        subject: 'Generic-mailsender | test',
-        text: 'Hey there, this is a test message sent with generic-mailsender',
+        subject: 'Generic-gmailsender | test',
+        text: 'Hey there, this is a test message sent with generic-gmailsender',
     };  
-    const test = send(options)
+    const test = email(options)
     expect(test).toHaveBeenCalled();
   });
 

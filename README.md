@@ -1,38 +1,41 @@
-# Generic-mailsender
+# Generic-gmailsender
 
-This is a simple tool to send mails from nodejs using the core library nodemailsender.
+This is a simple tool to send mails through gmail from nodejs using the core library nodemailsender.
 
 ## Installation
 
-In the root of your project run :
+To add the dependency, at the root of your project run :
 
 ```bash
-npm i generic-mailsender
+npm i generic-gmailsender
 ```
 
 ## Usage
 
-Add the following code and modify as you need it.
+Add the following code to your project and modify it as you consider.
 
 ```bash
-const email = require('generic-mailsender');
+const email = require('generic-gmailsender');
 
 var options = {
-    auth_mail: "test@gmail.com",
-    auth_pass: "test",
-    alias: '"Example Header" <',
-    to: 'test1@gmail.com, test2@gmail.com',
-    subject: 'Generic-mailsender | test',
-    text: 'Hey there, this is a test message sent with generic-mailsender',
+    auth_mail: "test@gmail.com", //Gmail address where the email will come from
+    auth_pass: "test", //Gmail password of this aaccount
+    alias: '"Example Header <"', // Sender header to identify mail
+    to: 'test1@gmail.com, test2@gmail.com', //Recipients
+    subject: 'Generic-gmailsender | test', //Mail subject
+    text: 'Hey there, this is a test message sent with generic-gmailsender', //Message to send
 };
 
-email.send(options);
+email(options);
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+By default Google blocks the sending of emails from less secure applications. Therefore you should allow less secure applications in your Google account to send emails, enabling with a simple click through this link. [Allow less secure apps From your Google Account](https://myaccount.google.com/lesssecureapps)
 
-[Github link project](https://github.com/rihernandez/generic-mailsender)
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change or add to this tool.
+
+[Github link project](https://github.com/rihernandez/generic-gmailsender)
+[Npm package](https://www.npmjs.com/package/generic-gmailsender)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

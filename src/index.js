@@ -1,7 +1,7 @@
 var nodemailer = require('nodemailer');
 
  
-function send (options) {
+function email (options) {
 
 let auth_mail;
 let auth_pass;
@@ -32,5 +32,5 @@ const transporter = () =>{
 
 }
 
-export default send;
-//module.exports = {send};
+export default email;
+
